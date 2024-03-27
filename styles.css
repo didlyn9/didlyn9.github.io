@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+
+
+html {
+    font-family: "Roboto Mono";
+}
+
+.navbar {
+    padding-top: 3px;
+    text-decoration: none;
+  }
+
+.navlist {
+    display: block;
+}
+
+.navlist li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navlist li a {
+    padding: 7px 7px;
+}
+
+
+
+nav ul {
+    text-align: center;
+    list-style: none;
+    display: inline-block;
+    text-decoration: none;
+    user-select: none;
+}
+
+.navlist ul {
+    list-style-type: none;
+}
+
+.navbar ul li a {
+    color: rgb(88, 88, 88);
+    text-decoration: none;
+    font-size: 15px;
+    user-select: 0;
+}
+
+.navbar ul li a:hover {
+    color: rgb(0, 216, 0);
+}
+
+.idk ::selection {
+    background: rgb(0, 216, 0);
+  }
+
+.idk {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 27px;
+    padding-bottom: 20px;
+}
+
+.end {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgb(0, 216, 0); /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    text-align: center; /* Centrer le texte */
+    font-size: 14px;
+}
+
+.end ::selection {
+    background: rgb(0, 216, 0);
+}
+
+.projet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Retirer la ligne suivante si elle existe, car elle limiterait la hauteur de vos éléments
+    height: 200px; */
+}
+
+
+.pro {
+    margin: 20px; /* Réduit la marge pour économiser de l'espace */
+    max-width: 45%; /* Limite la largeur maximale à 45% de celle du conteneur parent */
+    flex: 1 1 auto; /* Ajoute de la flexibilité pour permettre aux éléments de se rétrécir si nécessaire */
+    overflow: hidden; /* Cache le contenu qui déborde du conteneur */
+}
+
+.pro h2 a {
+    color:rgb(0, 216, 0);
+
+}
+
+body ::selection {
+    background: rgb(0, 216, 0);
+
+}
+
+.blank {
+    margin-bottom: 50px;
+}
+
+.pro img {
+    max-width: 100%; /* Cela empêche les images de dépasser la largeur de leur conteneur .pro */
+    height: auto; /* Cela maintient le ratio aspect de l'image */
+}
+
+.sections {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    justify-content: flex-start; /* Alignement au début de l'axe vertical */
+}
+
+.prosect {
+    width: 100%; /* Utilisez 100% pour que le conteneur s'étende sur toute la largeur disponible */
+    max-width: 1000px; /* Vous pouvez ajuster ceci pour contrôler la largeur maximale */
+    margin-bottom: 0px; /* Espacement entre les éléments .pro */
+    /* Reste du style pour .pro */
+}
+
+h3 a{
+    color: rgb(0, 216, 0);
+}
+
+.azer a {
+    color: rgb(0, 216, 0); 
+}
+
+.azer li {
+    color:  rgb(0, 216, 0);
+}
