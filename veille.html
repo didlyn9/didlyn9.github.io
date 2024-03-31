@@ -1,45 +1,101 @@
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="utf-8">
-        <meta name="keywords" content="Portfolio, BTS, SIO, SLAM, web, design, developpement, cybersecurite, reseau, securite, informatique">
-        <meta name="description" content="Portfolio BTS SIO option SLAM">
-        <meta name="author" content="Ozgur BARKAY">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="styles.css" media="all">
-		<title>Portfolio</title>
-	</head>
-	<body>
-        <nav class="navbar">
-            <ul class="navlist">
-                <li>
-                    <a href="index.html">Acceuil</a>
-                </li>
-                <li>
-                    <a href="e4.html">E4</a>
-                </li>
-                <li>
-                    <a href="portfolio.html">Portfolio</a>
-                </li>
-                <li>
-                    <a href="stages.html">Stages</a>
-                </li>
-                <li>
-                    <a href="veille.html">Veille technologique</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="idk">
-            <br/>
-            <br/>
-            <br/>
-		    <p>En construction</p>
-        </div>
-        <div class="end"><p>© 2024 | Ozgur BARKAY</p></div>
-	</body>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Portfolio, BTS, SIO, SLAM, web, design, developpement, cybersecurite, reseau, securite, informatique">
+    <meta name="description" content="Portfolio BTS SIO option SLAM">
+    <meta name="author" content="Ozgur BARKAY">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="styles.css" media="all">
+    <title>Portfolio</title>
+    <style>
+        .rss-link {
+            color: rgb(11, 202, 11);
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <ul class="navlist">
+        <li>
+            <a href="index.html">Acceuil</a>
+        </li>
+        <li>
+            <a href="e4.html">E4</a>
+        </li>
+        <li>
+            <a href="portfolio.html">Portfolio</a>
+        </li>
+        <li>
+            <a href="stages.html">Stages</a>
+        </li>
+        <li>
+            <a href="veille.html">Veille technologique</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+    </ul>
+</nav>
+<div class="idk">
+
+
+    <h4>Qu'est-ce que la veille technologique ?</h1>
+        <p>
+            La veille technologique consiste à s’informer de façon systématique sur les techniques les plus récentes et surtout sur leur mise à disposition commerciales. Ces informations peuvent concerner un produit, un composant, un procédé, ou bien l’évolution d’une technique utilisée au sein d’une entreprise par exemple.
+        </p>
+    <h4>Parmi les outils et les différentes techniques pour mener à bien sa veille technologique nous retrouvons :</h4>
+        <p>
+            <strong>Les flux RSS</strong>, les réseaux sociaux comme <strong>Twitter</strong> qui permettent de se construire un réseau efficace et bénéfique à notre apprentissage, les newsletter, les alertes (notamment Google Alert), les sites d'actualité (01net, developpez.net) et les sites spécialisés.
+        </p>
+
+    <h4>Qu'est-ce que l'intelligence artificielle ?</h1>
+            <p>
+                L'intelligence artificielle (IA) est un domaine de l'informatique qui vise à créer des systèmes informatiques capables de réaliser des tâches qui nécessitent normalement l'intelligence humaine, telles que la perception, le raisonnement, l'apprentissage et l'interaction sociale.
+            </p>
+
+    <h4>Quelques actualités</h4>
+
+    <div id="rss-feed"></div> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var rssUrl = 'https://openai.com/blog/rss.xml'; // RSS
+
+            $.ajax({
+                url: 'https://api.rss2json.com/v1/api.json',
+                method: 'GET',
+                dataType: 'json',
+                data: {
+                    rss_url: rssUrl
+                },
+                success: function(response) {
+                    if (response.status == 'ok') {
+                        var items = response.items;
+                        var rssFeed = $('#rss-feed');
+                        $.each(items, function(index, item) {
+                            rssFeed.append('<div><a class="rss-link" href="' + item.link + '">' + item.title + '</a></div>');
+                        });
+                    } else {
+                        $('#rss-feed').html('Erreur lors du chargement du flux RSS.');
+                    }
+                },
+                error: function() {
+                    $('#rss-feed').html('Erreur lors du chargement du flux RSS.');
+                }
+            });
+        });
+    </script>
+    <br/>
+    Compétences travaillées :<br/>
+    BLOC 1 - Services informatiques aux organisations<br/>
+    Organiser son développement professionnel<br/>
+    &nbspMettre en oeuvre des outils et stratégies de veille informationelle
+    <br/>
+    <br/>
+
+</div>
+<div class="end"><p>© 2024 | Ozgur BARKAY</p></div>
+</body>
 </html>
-		
